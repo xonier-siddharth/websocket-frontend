@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeConnectionBtn = document.getElementById('closeConnection');
 
     closeConnectionBtn.addEventListener('click', () => {
-        closeConnection(userId)
+        closeConnection(userId ? userId : 1)
     })
 
     // Function to handle subscription to a user's location updates
@@ -58,5 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error(`Connection error: ${err.message}`);
     });
 
-    subscribeToUser(userId)
+    subscribeToUser(userId ? userId : 1)
 });
