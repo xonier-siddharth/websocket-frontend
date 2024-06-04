@@ -12,8 +12,7 @@ var stepCount = 1;
 // Function to get the route from Google Directions API
 function getRoute(start, end) {
     console.log('start', start);
-    const apiKey = 'AIzaSyCAdzVvYFPUpI3mfGWUTVXLDTerw1UWbdg';
-    const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${start[0]},${start[1]}&destination=${end[0]},${end[1]}&key=${apiKey}`;
+    const url = `https://app.hrjee.com:6370/directions?origin=${start[0]},${start[1]}&destination=${end[0]},${end[1]}`;
     
     // Add markers for the start and end points
     L.marker(start).addTo(map).bindPopup("Start Point").openPopup();
