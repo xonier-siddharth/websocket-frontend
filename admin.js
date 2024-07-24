@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userId = urlParams.get('id');
     console.log('queryParam', userId);
 
-    const socket = io('https://app.hrjee.com:6370');
+    const socket = io('http://13.233.75.122:6370');
     
     const closeConnection = (userId) => {
         socket.emit('closeConnection', userId);
